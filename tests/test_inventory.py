@@ -1,45 +1,20 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import pytest
+from pages.login_page import LoginPage
+from pages.inventory_page import InventoryPage
 
-def test_inventory():
-    driver = webdriver.Chrome()
+def test_inventory(driver):
+    login_page = LoginPage(driver)
+    inventory_page = InventoryPage(driver)
 
-    try:
-        # Login
-        driver.get("https://www.saucedemo.com/")
-        
-        usuario = driver.find_element(By.ID,"user-name")
-        password = driver.find_element(By.ID,"password")
-        boton_login = driver.find_element(By.ID,"login-button")
+    driver.get("https://www.saucedemo.com/")
 
-        usuario.send_keys("standard_user")
-        password.send_keys("secret_sauce")
+    login_page.login("standard_user","secret_sauce")
 
-        boton_login.click()
+    productos = inventory_page.obtener_productos()
 
-        # Verificar el titulo de la pagina
-        assert driver.title == "Swag Labs"
+    assert len(productos) > 0
 
-        productos = driver.find_elements(By.CLASS_NAME, "inventory_item")
-        assert len(productos) > 0
+    assert inventory_page.obtener_nombre_primer_producto() == "Sauce Labs Backpack"
+    assert inventory_page.obtener_precio_primer_producto() == "$29.99"
 
-        primer_producto = productos[0]
-
-        nomre_producto = primer_producto.find_element(By.CLASS_NAME,"inventory_item_name").text
-        precio_producto = primer_producto.find_element(By.CLASS_NAME,"inventory_item_price").text
-
-        assert nomre_producto == "Sauce Labs Backpack"
-        assert precio_producto == "$29.99"
-
-        # Verificar menu
-        menu = driver.find_element(By.ID, "react-burger-menu-btn")
-
-        assert menu.is_displayed()
-
-        # verificar filtro
-        filtro = driver.find_element(By.CLASS_NAME,"product_sort_container")
-
-        assert filtro.is_displayed()
-    finally:
-        driver.quit()
+    assert inventory_page.menu_visible()
+    assert inventory_page.filtro_visible()

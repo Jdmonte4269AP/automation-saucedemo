@@ -13,7 +13,8 @@ def test_cart():
     try:
         # Login
         driver.get("https://www.saucedemo.com/")
-        
+
+        # Ingresar credenciales de ingreso para entrar la pagina
         wait.until(EC.visibility_of_element_located((By.ID,"user-name"))).send_keys("standard_user")
         password = driver.find_element(By.ID,"password")
         boton_login = driver.find_element(By.ID,"login-button")
