@@ -1,0 +1,4 @@
+usuario,password,tipo_usuario
+standard_user,secret_sauce,True
+admin,1234,False
+jose,123,False
