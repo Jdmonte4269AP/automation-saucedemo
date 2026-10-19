@@ -3,11 +3,12 @@ from selenium import webdriver
 
 @pytest.fixture
 def driver():
-    driver = webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    options.add_argument("--incognito")
+    driver = webdriver.Chrome(options=options)
 
     driver.implicitly_wait(10)
 
-    
 
     yield driver
 
