@@ -1,6 +1,7 @@
 # x-api-key: pub_5bca5ffc8772df976fcf8970168a1ad219ad499c472afbba2f27085fa4b4ef7d
 
 import requests
+import pytest_check as check
 
 def test_obtener_usuario(base_url,headers):
     url = f"{base_url}/users/2"
@@ -54,14 +55,14 @@ def test_crear_usuario(base_url,headers):
 
     # NIVEL 3
     data = response.json()
-    assert "email" in data
-    assert "first_name" in data
-    assert "last_name" in data
-    assert "id" in data
+    check.is_in("email",data) #assert "email" in data
+    check.is_in("first_name",data) #assert "first_name" in data
+    check.is_in("last_name",data) #assert "last_name" in data
+    check.is_in("id",data) #assert "id" in data
 
     # NIVEL 4
-    assert data["email"] == usuario["email"]
-    assert data["first_name"] == usuario["first_name"]
+    check.equal(data["email"],usuario["email"]) # assert data["email"] == usuario["email"]
+    check.equal(data["first_name"],usuario["first_name"]) # assert data["first_name"] == usuario["first_name"]
 
     # NIVEL 5: TIEMPO DE RESPUESTA
     assert response.elapsed.total_seconds() < 2

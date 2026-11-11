@@ -1,0 +1,36 @@
+2026-11-04 20:10:06,116 INFO talento_tech - Iniciando prueba de login
+2026-11-04 20:10:07,412 INFO talento_tech - Pagina abierta correctamente
+2026-11-04 20:10:07,583 INFO talento_tech - Ingreso de credenciales
+2026-11-04 20:10:07,616 INFO talento_tech - Login exitoso
+2026-11-04 20:10:10,238 INFO talento_tech - Iniciando prueba de login
+2026-11-04 20:10:11,578 INFO talento_tech - Pagina abierta correctamente
+2026-11-04 20:10:11,719 INFO talento_tech - Ingreso de credenciales
+2026-11-04 20:10:11,741 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\jdmon\Desktop\26221 - Miercoles\preentrega\tests\test_login.py", line 25, in test_login
+    assert "Epic sadfaceasdasd" in error
+AssertionError: assert 'Epic sadfaceasdasd' in 'Epic sadface: Username and password do not match any user in this service'
+2026-11-04 20:10:19,780 INFO talento_tech - Iniciando prueba de login
+2026-11-04 20:10:20,097 INFO talento_tech - Pagina abierta correctamente
+2026-11-04 20:10:20,341 INFO talento_tech - Ingreso de credenciales
+2026-11-04 20:10:20,368 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\jdmon\Desktop\26221 - Miercoles\preentrega\tests\test_login.py", line 25, in test_login
+    assert "Epic sadfaceasdasd" in error
+AssertionError: assert 'Epic sadfaceasdasd' in 'Epic sadface: Username and password do not match any user in this service'
+2026-11-04 20:10:28,123 INFO talento_tech - Iniciando prueba de login
+2026-11-04 20:10:28,514 INFO talento_tech - Pagina abierta correctamente
+2026-11-04 20:10:28,853 INFO talento_tech - Ingreso de credenciales
+2026-11-04 20:10:28,883 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\jdmon\Desktop\26221 - Miercoles\preentrega\tests\test_login.py", line 25, in test_login
+    assert "Epic sadfaceasdasd" in error
+AssertionError: assert 'Epic sadfaceasdasd' in 'Epic sadface: Username and password do not match any user in this service'
+2026-11-04 20:10:31,673 INFO talento_tech - Iniciando prueba de login
+2026-11-04 20:10:33,133 INFO talento_tech - Pagina abierta correctamente
+2026-11-04 20:10:33,271 INFO talento_tech - Ingreso de credenciales
+2026-11-04 20:10:33,289 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\jdmon\Desktop\26221 - Miercoles\preentrega\tests\test_login.py", line 25, in test_login
+    assert "Epic sadfaceasdasd" in error
+AssertionError: assert 'Epic sadfaceasdasd' in 'Epic sadface: Username and password do not match any user in this service'
