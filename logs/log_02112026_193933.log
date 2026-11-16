@@ -1,0 +1,76 @@
+2026-11-02 19:39:41,774 INFO talento_tech - Inicializando la prueba de carrito
+2026-11-02 19:39:41,775 INFO talento_tech - Ingresando a la pagina web de prueba
+2026-11-02 19:39:42,359 INFO talento_tech - Iniciando sesion con credenciales validas
+2026-11-02 19:39:43,151 INFO talento_tech - Sesion iniciada correctamente
+2026-11-02 19:39:43,151 ERROR talento_tech - Error durante la prueba de carrito
+Traceback (most recent call last):
+  File "C:\Users\GOSTE\Desktop\Talento Tech\Nueva carpeta\automation-saucedemo\tests\test_cart.py", line 24, in test_cart
+    logger("Ingresando a la pagina de inventario")
+TypeError: 'Logger' object is not callable
+2026-11-02 19:39:49,045 INFO talento_tech - Inicializando la prueba de Inventario
+2026-11-02 19:39:49,045 INFO talento_tech - Ingresando a la pagina web
+2026-11-02 19:39:49,681 INFO talento_tech - Ingresando credenciales para iniciar sesion
+2026-11-02 19:39:50,489 INFO talento_tech - Sesion iniciada correctamente
+2026-11-02 19:39:50,629 INFO talento_tech - Productos de la pagina web capturados
+2026-11-02 19:39:50,630 INFO talento_tech - Prueba de cantidad de productos validada
+2026-11-02 19:39:50,776 INFO talento_tech - Prueba de integradad de la informacion de los productos validada
+2026-11-02 19:39:51,015 INFO talento_tech - Prueba de visibilidad del menu en la pagina validada
+2026-11-02 19:40:01,081 ERROR talento_tech - Error durante la prueba de Inventario
+Traceback (most recent call last):
+  File "C:\Users\GOSTE\Desktop\Talento Tech\Nueva carpeta\automation-saucedemo\tests\test_inventory.py", line 31, in test_inventory
+    assert inventory_page.filtro_visible()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GOSTE\Desktop\Talento Tech\Nueva carpeta\automation-saucedemo\pages\inventory_page.py", line 30, in filtro_visible
+    filtro = self.driver.find_element(By.ID,"product_sort_container")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GOSTE\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 926, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GOSTE\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\GOSTE\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="product_sort_container"]"}
+  (Session info: chrome=156.0.8078.74); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff758c0be65]
+	(No symbol) [0x7ff758b135f0]
+	(No symbol) [0x7ff7589826d3]
+	(No symbol) [0x7ff75918d8e1]
+	(No symbol) [0x7ff75918db3c]
+	(No symbol) [0x7ff7591bbbb7]
+	(No symbol) [0x7ff7589b6661]
+	(No symbol) [0x7ff75899b969]
+	(No symbol) [0x7ff75899cca3]
+	(No symbol) [0x7ff759085af1]
+	(No symbol) [0x7ff7590a67f7]
+	(No symbol) [0x7ff75909ce20]
+	(No symbol) [0x7ff758d2ff8e]
+	(No symbol) [0x7ff758b22865]
+	(No symbol) [0x7ff758b1d1d4]
+	(No symbol) [0x7ff758b1d364]
+	(No symbol) [0x7ff758b0644c]
+	(No symbol) [0x7ffbb5ecdda7]
+	(No symbol) [0x7ffbb7afee4c]
+
+2026-11-02 19:40:05,755 INFO talento_tech - Iniciando prueba de login
+2026-11-02 19:40:06,374 INFO talento_tech - Pagina abierta correctamente
+2026-11-02 19:40:07,117 INFO talento_tech - Ingreso de credenciales
+2026-11-02 19:40:07,239 INFO talento_tech - Login exitoso
+2026-11-02 19:40:11,783 INFO talento_tech - Iniciando prueba de login
+2026-11-02 19:40:12,450 INFO talento_tech - Pagina abierta correctamente
+2026-11-02 19:40:13,117 INFO talento_tech - Ingreso de credenciales
+2026-11-02 19:40:13,213 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\GOSTE\Desktop\Talento Tech\Nueva carpeta\automation-saucedemo\tests\test_login.py", line 24, in test_login
+    assert "Epic sadfaceghjghj" in error
+AssertionError: assert 'Epic sadfaceghjghj' in 'Epic sadface: Username and password do not match any user in this service'
+2026-11-02 19:40:17,436 INFO talento_tech - Iniciando prueba de login
+2026-11-02 19:40:18,064 INFO talento_tech - Pagina abierta correctamente
+2026-11-02 19:40:18,703 INFO talento_tech - Ingreso de credenciales
+2026-11-02 19:40:18,765 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\GOSTE\Desktop\Talento Tech\Nueva carpeta\automation-saucedemo\tests\test_login.py", line 24, in test_login
+    assert "Epic sadfaceghjghj" in error
+AssertionError: assert 'Epic sadfaceghjghj' in 'Epic sadface: Username and password do not match any user in this service'

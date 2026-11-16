@@ -4,3 +4,4 @@ pytest-check==3.0.3
 selenium==4.49.0
 requests
 behave==1.3.3
+pytest-rerunfailures
