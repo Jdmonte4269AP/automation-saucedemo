@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: reporte-pytest-html
-          path: report.html
+          path: reports/report.html
