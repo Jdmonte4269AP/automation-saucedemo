@@ -22,11 +22,8 @@ def test_login(driver,data):
             logger.info("Login exitoso")
         elif data["tipo_usuario"] == "False":
             error = login_page.obtener_mensaje_error()
-<<<<<<< Updated upstream
             assert "Epic sad" in error
-=======
             assert "Epic sadface" in error
->>>>>>> Stashed changes
             logger.info("Prueba de mensaje de error valida")
     except Exception:
         logger.exception("Error durante la prueba de login")
